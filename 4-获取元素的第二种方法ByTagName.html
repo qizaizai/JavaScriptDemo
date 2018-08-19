@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<script>
+	window.onload=function(){
+		
+		var oUl=document.getElementById('list');//#list{}  list是某个ul元素的id名
+		document.getElementsByTagName('li');//li {}
+		var aLi=oUl.getElementsByTagName('li');
+		//相当于aLi=>[li,li,li]  元素的集合
+		alert(oUl.lenth);
+		alert(aLi.lenth);
+		
+		
+		//title可以直接修改
+		document.title="这是一个界面";
+		//body需要通过innerHTML修改
+		document.body.innerHTML="我是body";
+		
+		var aBtn=document.getElementsByTagName('input');
+		alert(aBtn.length);//此时页面中没有input类型的元素,长度肯定为0
+		
+		
+		//document.body.innerHTML='<input type="button" value="按钮">';
+		document.body.innerHTML="<input type='button' value='按钮'>";//注意：如果有多个引号嵌套，最外层的与内层的不同，并且内层的引号需要保持一致。
+		alert(aBtn.length);//一旦页面上有input元素了，就可以自动获取到了。
+		
+		//此时可以给按钮加点击动作
+		aBtn[0].onclick=function(){
+			alert(1);
+			};
+		
+	};
+</script>
+</head>
+
+<body>
+
+<ul id="list">
+	<li></li>
+</ul>
+</body>
+</html>
