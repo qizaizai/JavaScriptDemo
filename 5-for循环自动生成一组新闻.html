@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	window.onload=function(){
+		var oUl=document.getElementById('list');
+		var oBtn=document.getElementById('btn1');
+		
+		var arr=['划重点 重温习近平8-19讲话精髓',
+		'习近平：大爱无疆 医者仁心',
+		'习近平时间：幸福靠奋斗 兴邦靠实干 大江奔流',
+		'金一南少将：美国也知台湾牌危险 为啥还一直玩火',
+		'马哈蒂尔访华第一天都干了啥 传达出这些重磅信号'];
+		
+		oBtn.onclick=function(){
+			oBtn.disabled=true;//使按钮不再可点
+			
+			
+			//一次生成五条新闻
+			for(var i=0;i<5;i++){
+				var li=document.createElement('li');
+				li.innerHTML=arr[i];
+				oUl.appendChild(li);
+				}
+			}
+		
+		};
+
+</script>
+</head>
+
+<body>
+	<input id="btn1" type="button" value="自动生成新闻"/>
+	<ul id="list">
+		
+	</ul>
+
+</body>
+</html>

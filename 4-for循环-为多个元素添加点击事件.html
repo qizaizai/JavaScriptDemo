@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	li {
+		height:30px;
+		border-bottom:1px red solid;
+	}
+
+</style>
+<script>
+	window.onload=function(){
+		var oUl=document.getElementById('list');//这里命名规则是：oUl是指objectUl，aLi指arrayLi
+var aLi=document.getElementsByTagName('li');
+		
+var arr=['今天','明天','后天'];
+
+//添加点击事件
+for(var i=0;i<aLi.length;i++){
+	aLi[i].innerHTML=arr[i];
+	aLi[i].onclick=function(){
+		alert(i);//此时不管点击哪个li，提示都是3
+		};
+	}
+		};
+</script>
+
+</head>
+
+<body>
+<ul id="list">
+	<li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+
+</body>
+</html>

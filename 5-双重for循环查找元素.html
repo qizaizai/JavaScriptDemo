@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+
+<script>
+	/*
+	var arr=[
+			[1,2,3,'af','ewr'],
+			[2,4,6],
+			[1,3,5]
+			]; 
+	//双重for循环遍历arr数组
+	for(var i=0;i<arr.length;i++){
+		for(var j=0;j<arr[i].length;j++){
+			alert(arr[i][j]);
+			}
+		}	 
+	*/
+	
+	window.onload=function(){
+		var oUl=document.getElementById('list');
+		//找到每个一级列表
+		var aUl=oUl.getElementsByTagName('ul');
+		var aLi=null;
+		
+		for(var i=0;i<aUl.length;i++){
+			//找到每个一级列表下面的所有二级元素
+			aLi=aUl[i].getElementsByTagName('li');
+			//给每个元素添加边框
+			for(var j=0;j<aLi.length;j++){
+				aLi[j].style.border='1px red solid';
+				}
+			}
+		
+		};
+		
+			
+</script>
+</head>
+
+<body>
+	<ul id="list">
+    	<li>
+        	<h2>我的好友</h2>
+        	<ul>
+            	<li>Lisa</li>
+            	<li>mary</li>
+                <li>John</li>
+            </ul>
+        </li>
+        <li>
+        	<h2>家人</h2>
+        	<ul>
+            	<li>小红</li>
+            	<li>小黑</li>
+            </ul>
+        </li>
+       
+    </ul>
+	
+</body>
+</html>

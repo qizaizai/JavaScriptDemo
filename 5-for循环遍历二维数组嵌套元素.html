@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	div {
+		width:50px;
+		height:50px;
+		background:red;
+		position:absolute;
+		top:0;
+		left:0;
+	}
+
+</style>
+
+<script>
+	window.onload=function(){
+		var aDiv=document.getElementsByTagName('div');
+		//添加100个div元素
+		for(var i=0;i<100;i++){
+			document.body.innerHTML+='<div>'+i+'</div>';
+			
+			}
+		//设置每个div元素距离页面左边的距离
+		for(var i=0;i<aDiv.length;i++){
+			aDiv[i].style.left=i*60+'px';
+			
+			}
+		//每逢10个元素往下走一行
+		/*
+		for(var i=0;i<aDiv.length;i++){
+			if(i>10){
+				aDiv[i].style.top=Math.floor(i/10)*50+'px';//Math.floor()方法可对一个数进行下舍入。
+				}
+			
+			}
+		*/
+		
+		//排列成V字形
+		for(var i=0;i<100;i++){
+			if(i<50){
+				aDiv[i].style.top=i*50+'px';
+				}
+			else{
+				aDiv[i].style.top=(50*50-(i-50)*50)+'px';
+				}
+			
+			}
+		};
+		
+		
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

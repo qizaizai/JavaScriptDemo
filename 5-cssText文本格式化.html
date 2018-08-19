@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+	div {
+		width:100px;
+		height:100px;
+		border:1px red solid;
+	}
+</style>
+
+<script>
+	window.onload=function(){
+		var oDiv=document.getElementById('div1');
+		var oBtn=document.getElementById('btn1');
+		oDiv.onclick=function(){
+			//第一种写法
+			oDiv.style.width='200px';//注意值要用引号''包围
+			//第二种写法 使用cssText来进行修改
+			oDiv.style.cssText='width:200px; height:200px;';//标记1
+			};
+			
+		oBtn.onclick=function(){
+			oDiv.style.cssText='width:100px;height:100px;'//这一句会把标记1里面的所有内容覆盖
+			};
+		};
+	
+		
+</script>
+
+</head>
+
+<body>
+	<div id="div1"></div>
+	<input id="btn1" type="button" value="按钮" />
+</body>
+</html>
